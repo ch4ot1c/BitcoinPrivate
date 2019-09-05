@@ -46,6 +46,9 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     else if(!isForkBlock(nHeight) && isForkBlock(nHeight - params.nPowAveragingWindow))
         return nProofOfWorkLimit;
 
+    else if(pindexLast->nHeight > params.nHeightDiffBombRemoved)
+        return nProofOfWorkLimit;
+
     // difficulty bomb
     else if(pindexLast->nHeight > params.nPowDifficultyBombHeight)
         return nProofOfWorkBomb;
