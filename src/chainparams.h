@@ -136,6 +136,13 @@ protected:
     uint64_t nEquihashParamsUpdate;
     unsigned int nEquihashNnew;
     unsigned int nEquihashKnew;
+
+    // LWMA-1
+    uint64_t lwmaActivationHeight;
+    int64_t lwmaAveragingWindow;
+
+    // Sapling
+    uint64_t saplingActivationBlock;
 };
 
 /**

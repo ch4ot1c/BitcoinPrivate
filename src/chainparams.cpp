@@ -153,12 +153,21 @@ public:
                             //   total number of tx / (checkpoint block height / (24 * 24))
         };
 
+        // ZCL + BTC -> BTCP
         nForkStartHeight = 272991;
         nForkHeightRange = 5467;
 
+        // Equihash 192,7
         nEquihashParamsUpdate = 600001;
         nEquihashNnew = 192;
         nEquihashKnew = 7;
+
+        // LWMA-1
+        lwmaActivationHeight = -1; // TODO set me
+        lwmaAveragingWindow = 120;
+
+        // Sapling
+        saplingActivationBlock = 600002;
     }
 };
 static CMainParams mainParams;
@@ -247,12 +256,21 @@ public:
             0
         };
 
+        // ZCL + BTC -> BTCP
         nForkStartHeight = 10;
         nForkHeightRange = 0;
 
-        nEquihashParamsUpdate = 50;
+        // Equihash 192,7
+        nEquihashParamsUpdate = 130;
         nEquihashNnew = 192;
         nEquihashKnew = 7;
+
+        // LWMA-1
+        lwmaActivationHeight = 130;
+        lwmaAveragingWindow = 120;
+
+        // Sapling
+        saplingActivationBlock = 150;
     }
 };
 static CTestNetParams testNetParams;
@@ -324,12 +342,22 @@ public:
             0
         };
 
+
+        // ZCL + BTC -> BTCP
         nForkStartHeight = 50;
         nForkHeightRange = 0;
 
-        nEquihashParamsUpdate = 100;
+        // Equihash 192,7
+        nEquihashParamsUpdate = 250;
         nEquihashNnew = 192;
         nEquihashKnew = 7;
+
+        // LWMA-1
+        lwmaActivationHeight = 250;
+        lwmaAveragingWindow = 120;
+
+        // Sapling
+        saplingActivationBlock = 251;
     }
 };
 static CRegTestParams regTestParams;
